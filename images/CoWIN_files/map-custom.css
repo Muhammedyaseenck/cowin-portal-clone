@@ -1,0 +1,263 @@
+ 
+*{box-sizing: border-box;}
+a:focus,*:focus{outline: none;}
+a{text-decoration: none;}
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #000;
+    background: #f6f6f8
+}
+
+/*Ripple Button*/
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+.ripple:hover {
+    outline: 0;
+}
+.ripple:before {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+}
+.ripple:focus {
+    outline: none;
+}
+.ripple:focus:before {
+    transition: all 0.5s ease-out;
+    opacity: 0;
+    width: 160px;
+    height: 160px;
+    margin-top: -80px;
+    margin-left: -80px;
+}
+
+/*********************** Dashboard Starts here ***********************/
+.blueBtn {
+    background: #1e295d;
+    font:bold 16px 'Open Sans', sans-serif;
+    color: #fff;
+    border-radius: 4px;
+    padding:12px 10px;
+    border:none;
+    display: inline-block;
+    width: 100%; 
+}
+.blueBtn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.mainContainer { 
+    width: 100%;
+    display: block;
+    max-width: 100%;
+ 
+}
+.mapSec {
+    width: 60%;
+    float: left;
+   
+    margin-top: 20px;
+
+}
+.mapSec h1 {
+    font:bold 21px 'Open Sans', sans-serif;
+    color: #54595f;
+    margin-bottom: 32px;
+}
+.mapSec .mapDiv {
+    float: left;
+    width: 100%;    
+    background: #fff;
+    padding: 10px;
+}
+.mapSec .mapDiv .map {
+    float: left;
+    width: 100%;    
+    border:2px solid rgb(40, 123, 231);
+    height: 370px;
+    overflow: hidden;
+   
+}
+
+.mapSec .mapDiv .map img {
+    max-width: 100%;
+}
+
+.mapContent .mmi_search_dv .highligher-search {
+    padding-bottom: 3px;
+    width: 85%;
+    float: left;
+    font-size: 14px;
+    line-height: 18px;
+    color: #6f6e6e;
+    text-align: left;
+    font-weight: 600;
+}
+.mapContent .mmi_search_dv .highligher-search .mmi_match {
+    font-size: 14px !important;
+    color: #000;
+}
+
+.mapContent {
+    float: left;
+    width:40%;
+    margin-top: 25px;
+    padding: 0 20px;
+}
+.map-control .expand-map-control > li > a{background: #354a57;}
+.searchDiv {
+    float: left;
+    width: 100%;
+    margin-bottom: 0px;
+}
+.inputfield {
+    float: left;
+    width: calc(100% - 56px);
+    height: auto;
+    background: #fff;
+    font:14px 'Open Sans', sans-serif;
+    color: #54595f;
+    border-radius:  4px 0 0 4px;
+      padding: 16px 15px;;
+        border:1px solid #b8b5b6;
+
+}
+.inputfield::placeholder{color:#5f7d95}
+.seachBtn {
+    background: #354a57;
+    float: left;
+    width: 56px;
+    height: 50px;
+    border:none;
+    color: #fff;
+    font:14px 'Open Sans', sans-serif;
+    border-radius: 0 4px 4px 0;
+}
+.seachcontentDiv {
+  
+    width: 100%;
+  
+} 
+.searchList {
+    width: 100%;
+    padding: 0;
+    max-height: 255px;
+    overflow: auto;
+   border-top: 1px solid #ccc6c6
+}
+.searchList li {
+    float: left;
+    width: 100%;
+    padding: 15px 0 5px;
+  border-bottom:1px solid #ddd;
+}
+.searchList li h3 {
+    margin:0;
+    color: rgb(55, 73, 87);
+    font:bold 16px 'Open Sans', sans-serif;
+}
+.searchList li p {
+    color: rgb(114, 140, 161); 
+    font:14px 'Open Sans', sans-serif;
+}
+.searchList li span {
+    color: #909498;
+    font:14px 'Open Sans', sans-serif;
+}
+.searchList li h4 {
+    color: #29292b;
+    font:bold 14px 'Open Sans', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.greenBtn {
+    display: inline-block;
+    padding: 8px 12px;
+    background:#82ac3d;
+    color:#fff;
+    font:bold 14px 'Open Sans', sans-serif;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+.pinarea{display: block; margin-bottom: 15px;;}
+.greenBtn:hover {
+    background:#82ac3d;
+    color:#fff;
+    text-decoration: none;
+}
+.blueBtn {
+    text-align: center;
+   
+}
+.mainContainer >div.mapSec .searchDiv{display: none;}
+.mainContainer >div.mapContent .searchDiv{display: block;}
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+@media only screen and (max-width:768px) {
+    .mainContainer >div.mapSec .searchDiv{display: block; margin-bottom: 15px;}
+    .mainContainer >div.mapContent .searchDiv{display: none;}
+   .mainContainer >div {width:100%; float:none;padding:0}
+    .searchList{margin-top: 0px;}
+    .mainContainer >div.mapContent{  margin-top: 0px; padding: 0px 15px 0;}
+    .mainContainer >div.mapSec{ padding:   15px  ; margin: 0;}
+    .mainContainer >div.mapSec h1{margin-bottom: 15px;}
+    .mainContainer >div.mapSec .mapDiv{padding: 0px;}
+    .mapSec .mapDiv .map{    height: 285px;}
+    
+    
+   
+}
+
+  .mainContainer  .leaflet-popup-content-wrapper  .leaflet-popup-content{margin: 0px;padding: 0px 0px 15px;}
+  .mainContainer .leaflet-popup-content-wrapper .leaflet-popup-content a.blueBtn{border: #1e295d 1px solid;
+    display: block;
+    margin: 0 auto;
+    width: 158px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1e295d;
+    text-align: center;
+    background: #fff;
+    padding: 7px 20px;}
+  .mainContainer  .leaflet-popup-content h3{margin: 0;
+    background: #001e63;
+    border-radius: 6px 6px 0 0;
+    padding: 5px 10px;
+    color: #fff;}
+  .mainContainer  .leaflet-popup-content-wrapper {
+    padding: 0;
+    text-align: left;
+    border-radius: 6px;}
+    .mainContainer  .leaflet-popup-content p{margin:15px;}
+
+
